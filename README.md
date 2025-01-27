@@ -73,19 +73,19 @@ Arguments:
 
 #### Merge PDFs
 
-`merge_pdfs.py` combines specified PDFs into a single file in the given order.
+`combine_pdfs.py` combines specified PDFs into a single file in the given order.
 
 ```bash
-python merge_pdfs.py input1.pdf input2.pdf output.pdf
+python combine_pdfs.py output.pdf input-1.pdf input-2.pdf ... input-n.pdf
 ```
 
 Arguments:
 
-  1. Input first PDF file path
-  2. Input second PDF file path
-  3. Output PDF file path
+  1. Output PDF file path
+  2. Input PDF file paths
 
 ### Other scripts
 
 - `pdf_utils.py`: A script containing common functions used by other scripts.
 - `edit-pdf.bat`: A batch file example of actual usage of these scripts.
+- `merge-pdfs.py`: A script to merge two PDF files (deprecated).

@@ -33,14 +33,12 @@ def write_pdf(file_path, first_page, reader):
     with open(file_path, "wb") as output_pdf:
         writer.write(output_pdf)
 
-def merge_pdf(pdf1_path, pdf2_path, output_path):
-    """Merges two PDF files into one"""
+def merge_pdf(pdf_paths, output_path):
+    """Merges multiple PDF files into one"""
     merger = PdfWriter()
-    pdf1 = PdfReader(pdf1_path)
-    for page in pdf1.pages:
-        merger.add_page(page)
-    pdf2 = PdfReader(pdf2_path)
-    for page in pdf2.pages:
-        merger.add_page(page)
+    for pdf_path in pdf_paths:
+        pdf = PdfReader(pdf_path)
+        for page in pdf.pages:
+            merger.add_page(page)
     with open(output_path, "wb") as output_pdf:
         merger.write(output_pdf)
