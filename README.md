@@ -35,7 +35,7 @@ pip install -r requirements.txt
 To deactivate the virtual environment when you're done, simply run:
 
 ```bash
-deactivate
+.\pdf-edit-utils-env\Scripts\deactivate
 ```
 
 ### Usage
